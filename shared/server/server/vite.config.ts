@@ -6,14 +6,18 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./client/src"),
-      "@shared": path.resolve(__dirname, "./shared"),
-      "@db": path.resolve(__dirname, "./db"),
+      "@db": path.resolve(__dirname, "db"),
+      "@": path.resolve(__dirname, "client", "src"),
+      "@shared": path.resolve(__dirname, "shared"),
     },
   },
-  root: "./client",
+  root: path.resolve(__dirname, "client"),
   build: {
-    outDir: "../dist/public",
+    outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+  },
+  server: {
+    port: 5173,
+    host: true,
   },
 });
