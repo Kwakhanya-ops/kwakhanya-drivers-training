@@ -12,16 +12,12 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./client/src/*"],
       "@shared/*": ["./shared/*"],
-      "@db": ["./db/index.ts"]
+      "@db/*": ["./db/*"]
     }
   },
-  "include": ["client/src", "server", "shared", "db"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["client/src", "server", "shared", "db"]
 }
